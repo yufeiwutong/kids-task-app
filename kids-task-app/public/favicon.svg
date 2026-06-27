@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9a3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd93d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9500;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景圆角矩形 -->
+  <rect x="32" y="32" width="448" height="448" rx="96" ry="96" fill="url(#bgGrad)"/>
+  
+  <!-- 小星星装饰 -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="100" cy="120" r="6"/>
+    <circle cx="410" cy="100" r="4"/>
+    <circle cx="120" cy="380" r="5"/>
+    <circle cx="400" cy="400" r="7"/>
+    <circle cx="80" cy="250" r="3"/>
+    <circle cx="430" cy="260" r="4"/>
+  </g>
+  
+  <!-- 主星星 -->
+  <g filter="url(#glow)" transform="translate(256, 256)">
+    <path d="M 0 -130 L 38 -42 L 130 -40 L 56 20 L 82 112 L 0 58 L -82 112 L -56 20 L -130 -40 L -38 -42 Z" 
+          fill="url(#starGrad)" 
+          stroke="#fff" 
+          stroke-width="8"
+          stroke-linejoin="round"/>
+    
+    <!-- 星星的眼睛 -->
+    <ellipse cx="-35" cy="-20" rx="12" ry="16" fill="#333"/>
+    <ellipse cx="35" cy="-20" rx="12" ry="16" fill="#333"/>
+    <circle cx="-31" cy="-26" r="5" fill="#fff"/>
+    <circle cx="39" cy="-26" r="5" fill="#fff"/>
+    
+    <!-- 星星的微笑嘴巴 -->
+    <path d="M -30 25 Q 0 55 30 25" 
+          fill="none" 
+          stroke="#333" 
+          stroke-width="6" 
+          stroke-linecap="round"/>
+    
+    <!-- 腮红 -->
+    <ellipse cx="-60" cy="10" rx="15" ry="10" fill="#ff9999" opacity="0.7"/>
+    <ellipse cx="60" cy="10" rx="15" ry="10" fill="#ff9999" opacity="0.7"/>
+  </g>
+  
+  <!-- 闪烁装饰 -->
+  <g fill="#fff" opacity="0.9">
+    <path d="M 130 100 L 138 118 L 156 126 L 138 134 L 130 152 L 122 134 L 104 126 L 122 118 Z" transform="scale(0.6)"/>
+    <path d="M 680 180 L 690 205 L 715 215 L 690 225 L 680 250 L 670 225 L 645 215 L 670 205 Z" transform="scale(0.5)"/>
+  </g>
+</svg>

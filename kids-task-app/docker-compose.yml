@@ -1,0 +1,8 @@
+version: '3'
+services:
+  kids-task-app:
+    build: .
+    container_name: 成长星星
+    ports:
+      - "8080:80"
+    restart: unless-stopped
