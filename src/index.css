@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #fef7ee;
+  --color-primary-100: #fdedd3;
+  --color-primary-200: #fad7a5;
+  --color-primary-300: #f6ba6d;
+  --color-primary-400: #f19332;
+  --color-primary-500: #ee7712;
+  --color-primary-600: #df5c08;
+  --color-primary-700: #b94309;
+  --color-primary-800: #93360f;
+  --color-primary-900: #772e10;
+
+  --color-secondary-50: #f0fdf4;
+  --color-secondary-100: #dcfce7;
+  --color-secondary-200: #bbf7d0;
+  --color-secondary-300: #86efac;
+  --color-secondary-400: #4ade80;
+  --color-secondary-500: #22c55e;
+  --color-secondary-600: #16a34a;
+  --color-secondary-700: #15803d;
+  --color-secondary-800: #166534;
+  --color-secondary-900: #14532d;
+
+  --color-accent-50: #faf5ff;
+  --color-accent-100: #f3e8ff;
+  --color-accent-200: #e9d5ff;
+  --color-accent-300: #d8b4fe;
+  --color-accent-400: #c084fc;
+  --color-accent-500: #a855f7;
+  --color-accent-600: #9333ea;
+  --color-accent-700: #7e22ce;
+  --color-accent-800: #6b21a8;
+  --color-accent-900: #581c87;
+
+  --color-kidblue-50: #eff6ff;
+  --color-kidblue-100: #dbeafe;
+  --color-kidblue-200: #bfdbfe;
+  --color-kidblue-300: #93c5fd;
+  --color-kidblue-400: #60a5fa;
+  --color-kidblue-500: #3b82f6;
+  --color-kidblue-600: #2563eb;
+  --color-kidblue-700: #1d4ed8;
+  --color-kidblue-800: #1e40af;
+  --color-kidblue-900: #1e3a8a;
+
+  --color-kidpink-50: #fdf2f8;
+  --color-kidpink-100: #fce7f3;
+  --color-kidpink-200: #fbcfe8;
+  --color-kidpink-300: #f9a8d4;
+  --color-kidpink-400: #f472b6;
+  --color-kidpink-500: #ec4899;
+  --color-kidpink-600: #db2777;
+  --color-kidpink-700: #be185d;
+  --color-kidpink-800: #9d174d;
+  --color-kidpink-900: #831843;
+
+  --animate-bounce-slow: bounce 2s infinite;
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-pop: pop 0.3s ease-out;
+  --animate-float: float 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #fef7ee 0%, #f0fdf4 50%, #faf5ff 100%);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f6ba6d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f19332;
+}
+
+/* 卡片悬浮效果 */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* 按钮点击效果 */
+.btn-press:active {
+  transform: scale(0.95);
+}
+
+/* 渐变文字 */
+.gradient-text {
+  background: linear-gradient(135deg, #ee7712, #ec4899, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

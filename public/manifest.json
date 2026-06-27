@@ -1,0 +1,20 @@
+{
+  "name": "成长星星 - 儿童习惯养成",
+  "short_name": "成长星星",
+  "description": "帮助孩子培养良好习惯，通过任务打卡获得积分兑换奖励",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fef7ee",
+  "theme_color": "#ee7712",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "kids", "productivity"],
+  "lang": "zh-CN"
+}
